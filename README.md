@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+Fork the repository (For first time)
+
+```bash
+git clone https://github.com/100x-Devs/Scrape-Flow
+```
+
+Install dependencies:
+
+```bash
+npm install --legacy-peer-deps
+```
+
+Install dependencies:
+
+```bash
+npm install --legacy-peer-deps
+```
+
+Create a new .env file in the root folder Add add the following:
+```bash
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY= (Your Key)
+CLERK_SECRET_KEY= (Your Key)
+```
+
+Genetate Prisma:
+
+```bash
+ npx prisma generate
+```
+To view the MySQL database (Prisma Studio):
+
+```bash
+ npx prisma studio
+```
+
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+```bash
+npx prisma studio
+```
 
-To learn more about Next.js, take a look at the following resources:
+Then open [http://localhost:5555](http://localhost:5555) to view the database.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Steps for contributors
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Before you make any code changes, run the following commands to sync with the latest code changes:
 
-## Deploy on Vercel
+```bash
+git fetch origin
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+git merge origin/master
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you make any changes in the `schema.prisma` file:
+
+```bash
+npx prisma generate
+```
