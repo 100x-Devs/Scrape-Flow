@@ -12,12 +12,6 @@ Install dependencies:
 npm install --legacy-peer-deps
 ```
 
-Install dependencies:
-
-```bash
-npm install --legacy-peer-deps
-```
-
 Create a new .env file in the root folder Add add the following:
 ```bash
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY= (Your Key)
