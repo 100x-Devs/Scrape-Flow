@@ -1,6 +1,7 @@
 "use client";
 
 import SaveBtn from "@/app/workflow/_components/topbar/SaveBtn";
+import ExecuteBtn from "@/app/workflow/_components/topbar/ExecuteBtn";
 import TooltipWrapper from "@/components/TooltipWrapper";
 import { Button } from "@/components/ui/button";
 import { ChevronLeftIcon } from "lucide-react";
@@ -41,6 +42,7 @@ export default function Topbar({
         </div>
       </div>
       <div className="flex gap-1 flex-1 justify-end">
+        <ExecuteBtn WorkflowId={workflowId} />
         <SaveBtn workflowId={workflowId} />
       </div>
     </header>
