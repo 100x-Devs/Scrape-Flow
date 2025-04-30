@@ -7,9 +7,7 @@ import { useReactFlow } from '@xyflow/react'
 import { PlayIcon } from 'lucide-react'
 import React from 'react'
 import { toast } from 'sonner'
-import { WorkflowExecutionPlan } from '@/types/workflow';
-import { json } from 'stream/consumers'
-import { RunWorkflow } from '@/actions/workflows/runWorkFlow'
+import { RunWorkflow } from '@/actions/workflows/runWorkflow'
 
 export default function ExecuteBtn({WorkflowId} : {WorkflowId: string}) {
   const generate = useExecutionPlan();
